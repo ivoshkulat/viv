@@ -1,2 +1,2 @@
 # viv my tag
-# my tag 2.1
+# my tag 2
