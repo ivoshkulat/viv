@@ -1,0 +1,24 @@
+ class Billing
+    {
+        private Dictionary<User, bool> users;
+
+        public Billing()
+        {
+            users = new Dictionary<User, bool>();
+        }
+
+        public bool userDelete(User user)
+        {
+            return users.Remove(user);
+        }
+
+        public void userAdd(User user)
+        {
+            users.Add(user, false);
+        }
+
+        public bool userPay(User user)
+        {
+            return users[user] = true;
+        }
+    }
