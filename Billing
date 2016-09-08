@@ -1,22 +1,23 @@
- class Billing
+ //Billing - является контейнером, который содержит список пользователей(class User) и состояние оплаты услуги.
+    class Billing
     {
         private Dictionary<User, bool> users;
-
+        //Создание объекта. Без параметров и дополнительных методов.
         public Billing()
         {
             users = new Dictionary<User, bool>();
         }
-
+        //Удаление пользователя. Необходимо передать объект пользователя. Возвращается boolовский результат операции.
         public bool userDelete(User user)
         {
             return users.Remove(user);
         }
-
+        //Добавление пользователя. Необходимо передать объект пользователя.
         public void userAdd(User user)
         {
             users.Add(user, false);
         }
-
+        //Оплата. Необходимо передать объект пользователя, который производит оплату.
         public bool userPay(User user)
         {
             return users[user] = true;
